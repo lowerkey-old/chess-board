@@ -6,13 +6,18 @@
   Sources:
   http://www.456bereastreet.com/archive/201012/how_to_create_a_3-column_layout_with_css/  
   http://quirksmode.org/css/css2/columns.html
+  https://www.w3.org/Style/Examples/007/evenodd.en.html
+  a css thing on table
+  a css thing on rowspans
+  
+  
 */
 
 body {
   margin: 0;
   border: 0;
   padding: 0;
-  background-image: url('art/knödel.jpg');
+  background-image: url('art/background/knödel.jpg');
 }
 
 h1 {
@@ -37,17 +42,32 @@ td {
   height: 50px;
 }
 
-td:nth-child(odd):not(.pieces) {
-  background-image: url();
+tr:nth-child(odd)>td:nth-child(odd):not(.pieces) {
+  background-image: url('art/field/fire-3.png');
 }
 
-td:nth-child(even):not(.pieces) {
-  background-image: url();
+tr:nth-child(odd)>td:nth-child(even):not(.pieces) {
+  background-image: url('art/field/fence-3.png');
+}
+
+tr:nth-child(even)>td:nth-child(even):not(.pieces) {
+  background-image: url('art/field/fire-3.png');
+}
+
+tr:nth-child(even)>td:nth-child(odd):not(.pieces) {
+  background-image: url('art/field/fence-3.png');
 }
 
 td.pieces {
-  border: 1px solid black;
-  
   width: 100px;
   height: 50px;
 }
+
+td.pieces#white {
+  border: 1px solid white;
+}
+
+td.pieces#black {
+  border: 2px solid black;
+}
+
