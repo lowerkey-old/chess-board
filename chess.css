@@ -9,7 +9,9 @@
   https://www.w3.org/Style/Examples/007/evenodd.en.html
   a css thing on table
   a css thing on rowspans
-  
+  http://stackoverflow.com/questions/13526712/make-div-draggable-using-css
+  http://www.computerhope.com/issues/ch001655.htm
+  http
   
 */
 
@@ -17,11 +19,12 @@ body {
   margin: 0;
   border: 0;
   padding: 0;
-  background-image: url('art/background/knödel.jpg');
+  background-image: url('art/background/cereal-flipped.jpg');
+  background-size: 100%;
 }
 
 h1 {
-  font-color: black;
+  color: gray;
 }
 
 #board {
@@ -32,7 +35,7 @@ h1 {
 /* these are not yet dynamic */
 
 th {
-  font-color: white;
+  color: white;
 }
 
 /* td is equivalent to td.pieces (there is no td.field). */
@@ -43,20 +46,37 @@ td {
 }
 
 tr:nth-child(odd)>td:nth-child(odd):not(.pieces) {
-  background-image: url('art/field/fire-3.png');
+  background-image: url('art/field/red.png');
 }
 
 tr:nth-child(odd)>td:nth-child(even):not(.pieces) {
-  background-image: url('art/field/fence-3.png');
+  background-image: url('art/field/brown.png');
 }
 
 tr:nth-child(even)>td:nth-child(even):not(.pieces) {
-  background-image: url('art/field/fire-3.png');
+  background-image: url('art/field/red.png');
 }
 
 tr:nth-child(even)>td:nth-child(odd):not(.pieces) {
-  background-image: url('art/field/fence-3.png');
+  background-image: url('art/field/brown.png');
 }
+
+td#chat {
+  background-image: none;
+}
+
+/*
+#chat>#window {
+  width: 100%;
+  height: 390px;
+}
+
+#chat>#entry {
+  width: 100%;
+  height: 10px;
+}
+*/
+
 
 td.pieces {
   width: 100px;
