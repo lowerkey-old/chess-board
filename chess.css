@@ -16,15 +16,15 @@
 */
 
 body {
-  margin: 0;
+  margin-left: 10px;
   border: 0;
   padding: 0;
-  background-image: url('art/background/infrastructure.jpg');
+  background-image: url('art/background/knödel.jpg');
   background-size: 100%;
 }
 
 h1 {
-  color: gray;
+  color: black;
 }
 
 #board {
